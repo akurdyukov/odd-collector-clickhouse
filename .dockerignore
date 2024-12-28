@@ -1,0 +1,6 @@
+venv/
+out/
+.idea/
+docker/
+
+collector_config.yaml
