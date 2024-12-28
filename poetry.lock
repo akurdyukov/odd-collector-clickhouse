@@ -192,17 +192,17 @@ tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "boto3"
-version = "1.35.88"
+version = "1.35.90"
 description = "The AWS SDK for Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "boto3-1.35.88-py3-none-any.whl", hash = "sha256:7bc9b27ad87607256470c70a86c8b8c319ddd6ecae89cc191687cbf8ccb7b6a6"},
-    {file = "boto3-1.35.88.tar.gz", hash = "sha256:43c6a7a70bb226770a82a601870136e3bb3bf2808f4576ab5b9d7d140dbf1323"},
+    {file = "boto3-1.35.90-py3-none-any.whl", hash = "sha256:b0874233057995a8f0c813f5b45a36c09630e74c43d7a7c64db2feef2915d493"},
+    {file = "boto3-1.35.90.tar.gz", hash = "sha256:dc56caaaab2157a4bfc109c88b50cd032f3ac66c06d17f8ee335b798eaf53e5c"},
 ]
 
 [package.dependencies]
-botocore = ">=1.35.88,<1.36.0"
+botocore = ">=1.35.90,<1.36.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.10.0,<0.11.0"
 
@@ -211,13 +211,13 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.35.88"
+version = "1.35.90"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "botocore-1.35.88-py3-none-any.whl", hash = "sha256:e60cc3fbe8d7a10f70e7e852d76be2b29f23ead418a5899d366ea32b1eacb5a5"},
-    {file = "botocore-1.35.88.tar.gz", hash = "sha256:58dcd9a464c354b8c6c25261d8de830d175d9739eae568bf0c52e57116fb03c6"},
+    {file = "botocore-1.35.90-py3-none-any.whl", hash = "sha256:51dcbe1b32e2ac43dac17091f401a00ce5939f76afe999081802009cce1e92e4"},
+    {file = "botocore-1.35.90.tar.gz", hash = "sha256:f007f58e8e3c1ad0412a6ddfae40ed92a7bca571c068cb959902bcf107f2ae48"},
 ]
 
 [package.dependencies]
@@ -1802,6 +1802,33 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
+name = "ruff"
+version = "0.8.4"
+description = "An extremely fast Python linter and code formatter, written in Rust."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ruff-0.8.4-py3-none-linux_armv6l.whl", hash = "sha256:58072f0c06080276804c6a4e21a9045a706584a958e644353603d36ca1eb8a60"},
+    {file = "ruff-0.8.4-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:ffb60904651c00a1e0b8df594591770018a0f04587f7deeb3838344fe3adabac"},
+    {file = "ruff-0.8.4-py3-none-macosx_11_0_arm64.whl", hash = "sha256:6ddf5d654ac0d44389f6bf05cee4caeefc3132a64b58ea46738111d687352296"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e248b1f0fa2749edd3350a2a342b67b43a2627434c059a063418e3d375cfe643"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:bf197b98ed86e417412ee3b6c893f44c8864f816451441483253d5ff22c0e81e"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c41319b85faa3aadd4d30cb1cffdd9ac6b89704ff79f7664b853785b48eccdf3"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:9f8402b7c4f96463f135e936d9ab77b65711fcd5d72e5d67597b543bbb43cf3f"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e4e56b3baa9c23d324ead112a4fdf20db9a3f8f29eeabff1355114dd96014604"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:736272574e97157f7edbbb43b1d046125fce9e7d8d583d5d65d0c9bf2c15addf"},
+    {file = "ruff-0.8.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e5fe710ab6061592521f902fca7ebcb9fabd27bc7c57c764298b1c1f15fff720"},
+    {file = "ruff-0.8.4-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:13e9ec6d6b55f6da412d59953d65d66e760d583dd3c1c72bf1f26435b5bfdbae"},
+    {file = "ruff-0.8.4-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:97d9aefef725348ad77d6db98b726cfdb075a40b936c7984088804dfd38268a7"},
+    {file = "ruff-0.8.4-py3-none-musllinux_1_2_i686.whl", hash = "sha256:ab78e33325a6f5374e04c2ab924a3367d69a0da36f8c9cb6b894a62017506111"},
+    {file = "ruff-0.8.4-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:8ef06f66f4a05c3ddbc9121a8b0cecccd92c5bf3dd43b5472ffe40b8ca10f0f8"},
+    {file = "ruff-0.8.4-py3-none-win32.whl", hash = "sha256:552fb6d861320958ca5e15f28b20a3d071aa83b93caee33a87b471f99a6c0835"},
+    {file = "ruff-0.8.4-py3-none-win_amd64.whl", hash = "sha256:f21a1143776f8656d7f364bd264a9d60f01b7f52243fbe90e7670c0dfe0cf65d"},
+    {file = "ruff-0.8.4-py3-none-win_arm64.whl", hash = "sha256:9183dd615d8df50defa8b1d9a074053891ba39025cf5ae88e8bcb52edcc4bf08"},
+    {file = "ruff-0.8.4.tar.gz", hash = "sha256:0d5f89f254836799af1615798caa5f80b7f935d7a670fad66c5007928e57ace8"},
+]
+
+[[package]]
 name = "s3transfer"
 version = "0.10.4"
 description = "An Amazon S3 Transfer Manager"
@@ -2343,4 +2370,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "5ff18c6fdecf0a55388edae1e1974f18f5407b43171ecfdf8d790f648defdb21"
+content-hash = "05e7d5ada4f91e1e3b1639e44f6a55d96800896656a97d901a246b46d46c4b76"
