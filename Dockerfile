@@ -1,28 +1,23 @@
-FROM python:3.12.8-slim-bookworm as base
+FROM python:3.12.8-slim-bookworm AS base
 
-ENV POETRY_HOME=/etc/poetry \
+ENV POETRY_HOME=/opt/poetry \
     POETRY_VERSION=1.8.4
-ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
+ENV PATH="$POETRY_HOME/bin:$PATH"
 
 FROM base AS build
 
 RUN apt-get update && \
-    apt-get install -y -q build-essential \
-    python3-dev  \
-    curl \
-    openssl \
-    libsasl2-dev
+    apt-get install -y -q curl
 
 RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=${POETRY_HOME} python3 -
 RUN poetry config virtualenvs.create false
-RUN poetry config experimental.new-installer false
 
 COPY poetry.lock pyproject.toml ./
 RUN poetry lock --no-update
 RUN poetry install --no-interaction --no-ansi --no-dev -vvv
 
 
-FROM base as runtime
+FROM base AS runtime
 
 RUN useradd --create-home --shell /bin/bash app
 USER app
