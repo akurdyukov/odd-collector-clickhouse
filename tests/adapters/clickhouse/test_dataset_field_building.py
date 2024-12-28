@@ -1,10 +1,11 @@
 import unittest
+
+from odd_models.models import DataSetField, Type
+from oddrn_generator import ClickHouseGenerator
 from parameterized import parameterized
 
 from odd_collector_clickhouse.adapters.clickhouse.domain import Column
 from odd_collector_clickhouse.adapters.clickhouse.mappers.columns import build_dataset_fields
-from odd_models.models import DataSetField, Type
-from oddrn_generator import ClickHouseGenerator
 
 
 class TestDataSetFieldsBuilder(unittest.TestCase):

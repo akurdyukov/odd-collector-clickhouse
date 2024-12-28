@@ -1,6 +1,7 @@
 """
 PredefinedDataSource class used for BI services when DataEntities use external resources
-For an example: Cube's cube uses postgres table, we have no information about that data source to generate valid oddrn for input
+For an example: Cube's cube uses postgres table, we have no information about that data source
+to generate valid oddrn for input
 """
 import logging
 from abc import ABC, abstractmethod

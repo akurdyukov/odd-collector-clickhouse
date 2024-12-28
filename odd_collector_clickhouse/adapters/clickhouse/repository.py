@@ -25,20 +25,20 @@ select t.name,
     t.create_table_query,
     t.metadata_modification_time
 from system.tables t
-where t.database = %(database)s 
+where t.database = %(database)s
 and t.engine not in {INTEGRATION_ENGINES}
 """
 
 COLUMN_SELECT = f"""
-select 
-    c.database, 
-    c.table, 
-    c.name, 
-    c.type, 
-    c.position, 
-    c.default_kind, 
-    c.default_expression, 
-    c.data_compressed_bytes, 
+select
+    c.database,
+    c.table,
+    c.name,
+    c.type,
+    c.position,
+    c.default_kind,
+    c.default_expression,
+    c.data_compressed_bytes,
     c.data_uncompressed_bytes,
     c.marks_bytes,
     c.comment,

@@ -14,9 +14,9 @@ from ..grammar_parser.column_type import (
     Map,
     NamedTuple,
     Nested,
+    Nullable,
     ParseType,
     Tuple,
-    Nullable,
 )
 from ..grammar_parser.parser import parser, traverse_tree
 from ..logger import logger
@@ -47,7 +47,7 @@ def build_dataset_fields(
         if len(column_names) != 1:
             logger.debug(f"Process complex column {column_name}")
 
-            if not column_names[0] in ds_fields_oddrn:
+            if column_names[0] not in ds_fields_oddrn:
                 ds_fields_oddrn[column_names[0]] = oddrn
                 generated_dataset_fields.append(
                     DataSetField(

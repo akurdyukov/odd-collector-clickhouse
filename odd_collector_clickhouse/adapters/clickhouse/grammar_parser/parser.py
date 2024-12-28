@@ -14,11 +14,11 @@ from .column_type import (
     Map,
     NamedTuple,
     Nested,
+    Nullable,
     ParseType,
     Tuple,
-    Nullable,
 )
-from .exceptions import *
+from .exceptions import NonTypeObjectError, StructureError, UnexpectedTypeError
 
 """
 This parser uses earley type instead of larl type. We need to support different types of Tuple in Clickhouse

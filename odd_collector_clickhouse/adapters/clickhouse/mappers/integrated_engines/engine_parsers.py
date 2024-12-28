@@ -11,11 +11,11 @@ class BaseEngineParser:
 
     @abstractmethod
     def __init__(self, source_table, settings):
-        raise NotImplemented
+        raise NotImplementedError
 
     @abstractmethod
     def get_oddrns(self) -> List[str]:
-        raise NotImplemented
+        raise NotImplementedError
 
 
 class KafkaEngineParser(BaseEngineParser):

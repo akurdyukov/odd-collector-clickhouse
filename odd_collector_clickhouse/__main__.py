@@ -1,9 +1,10 @@
 from pathlib import Path
 
+from odd_collector_sdk.collector import Collector
+
 from odd_collector_clickhouse import get_version
 from odd_collector_clickhouse.domain.plugin import PLUGIN_FACTORY
 from odd_collector_clickhouse.logger import logger
-from odd_collector_sdk.collector import Collector
 
 COLLECTOR_PACKAGE = __package__
 CONFIG_PATH = Path(__file__).resolve().parents[1].joinpath("collector_config.yaml")
