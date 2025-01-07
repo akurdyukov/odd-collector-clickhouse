@@ -24,18 +24,20 @@ jobs:
         python-version: "3.9.16"
 
     - name: Setup poetry
-      uses: abatilo/actions-poetry@v2
+      uses: abatilo/actions-poetry@v4
       with:
         poetry-version: "1.8.4"
+
+    - name: Install ubuntu packages
+      uses: ConorMacBride/install-package@v1
+      with:
+        apt: 'curl'
 
     - name: Install dependencies and needed compilers
       working-directory: odd-collector-clickhouse
       run: |
-        sudo apt-get update && sudo apt-get install -y -q curl
         poetry install
 
-    # for now, only tests for PostgreSQL and Snowflake adapters are being invoked,
-    # others need to be checked and updated for future use
     - name: Run tests
       working-directory: odd-collector
       run: |
