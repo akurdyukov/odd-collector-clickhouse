@@ -34,11 +34,9 @@ jobs:
         apt: 'curl'
 
     - name: Install dependencies and needed compilers
-      working-directory: odd-collector-clickhouse
       run: |
         poetry install
 
     - name: Run tests
-      working-directory: odd-collector
       run: |
         poetry run pytest tests/adapters/clickhouse -v
